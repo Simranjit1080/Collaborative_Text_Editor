@@ -4,7 +4,7 @@ const http=require('http').createServer(app);
 const io=require('socket.io')(http);
 app.use(express.static(__dirname));
 app.get('/',(req,res)=>{
-    res.sendFile(__dirname+'/public/client.html');
+    res.sendFile(__dirname+'/client.html');
 });
 io.on('connection', (socket)=>{
     socket.on('message', (msg)=>{
