@@ -11,7 +11,7 @@ io.on('connection', (socket)=>{
         socket.broadcast.emit('message',msg);
     });
 });
-io.on('disconnect', (evt)=>{
+io.on('disconnect', ()=>{
     console.log('someone disconnected');
 });
 
